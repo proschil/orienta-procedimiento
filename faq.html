@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Acreditación de competencias</title>
+    <style>
+        :root {
+            --color-verde: #2E8B57;
+            --color-azul: #4682B4;
+            --color-naranja: #FF8C42;
+            --color-bordes: #e0e0e0;
+            --color-fondo: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--color-fondo);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--color-bordes);
+            padding-bottom: 20px;
+        }
+        
+        header h1 {
+            color: #333;
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+        
+        header p {
+            color: #666;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-bordes);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .section-title {
+            color: var(--color-azul);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .category-title {
+            color: var(--color-verde);
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .index-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        
+        .index-section p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .index-section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .index-section li {
+            margin: 0;
+        }
+        
+        .index-section a {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--color-azul);
+            transition: background-color 0.3s ease;
+        }
+        
+        .index-section a:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-size: 18px;
+            color: var(--color-naranja);
+        }
+        
+        .faq-question.active:after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-left: 15px;
+            border-left: 3px solid var(--color-bordes);
+            margin-left: 5px;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .faq-answer p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        
+        a {
+            color: var(--color-azul);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--color-naranja);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            margin-top: 25px;
+        }
+        
+        .btn:hover {
+            background-color: #e67e3a;
+            text-decoration: none;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Preguntas Frecuentes (FAQ)</h1>
+            <p>Respuestas a las dudas más comunes sobre el procedimiento de acreditación de competencias adquiridas a través de la experiencia laboral u otras vías no formales e informales</p>
+        </header>
+        
+        <div class="index-section">
+            <p>Índice de contenidos:</p>
+            <ul>
+                <li><a href="#requisitos">Epígrafe 1</a></li>
+                <li><a href="#solicitud">Proceso de solicitud</a></li>
+                <li><a href="#asesoramiento">Fase de asesoramiento</a></li>
+                <li><a href="#evaluacion">Fase de evaluación</a></li>
+                <li><a href="#certificados">Certificados profesionales</a></li>
+                <li><a href="#formacion">Formación complementaria</a></li>
+            </ul>
+        </div>
+        
+        <!-- Sección: Requisitos -->
+        <section id="requisitos" class="section">
+            <h2 class="section-title">Epígrafe 1</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">cuestión 1 bla bla bla (por ejemplo, 3 años vs 2000 horas)</div>
+                <div class="faq-answer">
+                    <p>Para participar en el procedimiento debe cumplir los siguientes requisitos:</p>
+                    <p>- Tener nacionalidad española, o certificado de registro de ciudadanía comunitaria, o tarjeta de familiar de ciudadano de la Unión, o autorización de residencia o residencia y trabajo en España.</p>
+                    <p>- Tener 18 años para cualificaciones de nivel 1, o 20 años para cualificaciones de nivel 2 y 3.</p>
+                    <p>- Tener experiencia laboral y/o formación relacionada con las competencias que quiere acreditar.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">cuestión 2 bla bla bla (por ejemplo, 3 años vs 2000 horas)</div>
+                <div class="faq-answer">
+                    <p>La experiencia laboral mínima requerida es:</p>
+                    <p>- 2 años (1.200 horas) en los últimos 15 años para cualificaciones de nivel 1.</p>
+                    <p>- 3 años (2.000 horas) en los últimos 15 años para cualificaciones de nivel 2 y 3.</p>
+                    <p>En el caso de formación no formal, se requieren al menos 200 horas para nivel 1 o 300 horas para nivel 2 y 3.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué cualificaciones puedo acreditar en Canarias?</div>
+                <div class="faq-answer">
+                    <p>Puede consultar las cualificaciones susceptibles de acreditación en el <a href="https://cualificaciones-profesionales.vercel.app/" target="_blank">Buscador de cualificaciones profesionales Canarias 2025</a>.</p>
+                    <p>También puede ver la lista completa en la <a href="https://www.gobiernodecanarias.org/boc/2025/041/832.html" target="_blank">Resolución de 17 de febrero de 2025</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección: Solicitud -->
+        <section id="solicitud" class="section">
+            <h2 class="section-title">Proceso de solicitud</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo puedo presentar mi solicitud?</div>
+                <div class="faq-answer">
+                    <p>Puede presentar su solicitud de dos formas:</p>
+                    <p>1. <strong>Telemáticamente</strong>: a través de la <a href="https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/6907" target="_blank">sede electrónica del Gobierno de Canarias</a> (Procedimiento 6907).</p>
+                    <p>2. <strong>Presencialmente</strong>: en las <a href="https://www.gobiernodecanarias.org/oficinasderegistro/" target="_blank">oficinas de registro</a> habilitadas.</p>
+                    <p>Para más información, consulte la <a href="media/GUIA_PERSONA_CANDIDATA.pdf" target="_blank">Guía de la persona candidata</a>.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué documentación debo presentar?</div>
+                <div class="faq-answer">
+                    <p>Deberá presentar la siguiente documentación:</p>
+                    <p>- Solicitud debidamente cumplimentada.</p>
+                    <p>- DNI, NIE o pasaporte (si no autoriza la consulta).</p>
+                    <p>- Curriculum Vitae europeo.</p>
+                    <p>- Documentación acreditativa de la experiencia laboral (vida laboral, contratos, certificados de empresa).</p>
+                    <p>- Documentación acreditativa de formación no formal (diplomas, certificados).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Hay plazos para presentar la solicitud?</div>
+                <div class="faq-answer">
+                    <p>El procedimiento está abierto permanentemente. Puede presentar su solicitud en cualquier momento del año.</p>
+                    <p>Una vez presentada, se asignará a la convocatoria en curso o a la siguiente según la disponibilidad de plazas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección: Asesoramiento -->
+        <section id="asesoramiento" class="section">
+            <h2 class="section-title">Fase de asesoramiento</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿En qué consiste la fase de asesoramiento?</div>
+                <div class="faq-answer">
+                    <p>En esta fase, un asesor o asesora le ayudará a:</p>
+                    <p>- Identificar y clarificar sus competencias profesionales.</p>
+                    <p>- Recopilar y organizar las evidencias que demuestren sus competencias.</p>
+                    <p>- Cumplimentar el cuestionario de autoevaluación.</p>
+                    <p>- Elaborar su historial profesional y formativo.</p>
+                    <p>El asesor emitirá un informe orientativo sobre la conveniencia de pasar a la fase de evaluación.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Es obligatorio seguir las recomendaciones del asesor?</div>
+                <div class="faq-answer">
+                    <p>No. El informe del asesor es orientativo, pero no vinculante. Usted puede decidir pasar a la fase de evaluación aunque el informe no sea favorable.</p>
+                    <p>Sin embargo, es recomendable valorar cuidadosamente el consejo profesional del asesor, ya que conoce en detalle los requisitos del proceso de evaluación.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto dura esta fase?</div>
+                <div class="faq-answer">
+                    <p>La duración de la fase de asesoramiento es variable según cada caso, pero suele incluir:</p>
+                    <p>- Una o dos sesiones individuales presenciales o telemáticas.</p>
+                    <p>- Trabajo autónomo para recopilar y organizar evidencias.</p>
+                    <p>Generalmente, esta fase se completa en un periodo de 2 a 4 semanas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección: Evaluación -->
+        <section id="evaluacion" class="section">
+            <h2 class="section-title">Fase de evaluación</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo se realiza la evaluación?</div>
+                <div class="faq-answer">
+                    <p>La evaluación puede realizarse mediante diferentes métodos:</p>
+                    <p>- Análisis del informe del asesor y la documentación aportada.</p>
+                    <p>- Entrevista profesional estructurada.</p>
+                    <p>- Observación en el puesto de trabajo o simulación.</p>
+                    <p>- Pruebas profesionales de competencia.</p>
+                    <p>- Ejercicios profesionales, teóricos o prácticos.</p>
+                    <p>Se utilizarán los métodos más adecuados según la naturaleza de la unidad de competencia a evaluar.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué resultados puedo obtener?</div>
+                <div class="faq-answer">
+                    <p>Cada unidad de competencia evaluada puede obtener dos resultados:</p>
+                    <p>- <strong>Demostrada</strong>: ha demostrado la competencia profesional requerida.</p>
+                    <p>- <strong>No demostrada</strong>: no ha podido demostrar la competencia profesional.</p>
+                    <p>El resultado se comunica individualmente y puede recurrir si no está conforme.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Si no demuestro alguna competencia, ¿puedo intentarlo de nuevo?</div>
+                <div class="faq-answer">
+                    <p>Sí. Si alguna unidad de competencia resulta "no demostrada", recibirá:</p>
+                    <p>- Un informe individualizado con orientaciones sobre formación complementaria.</p>
+                    <p>- Información sobre próximas convocatorias para intentarlo nuevamente.</p>
+                    <p>Las unidades de competencia "demostradas" serán reconocidas en futuras convocatorias.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección: Certificados -->
+        <section id="certificados" class="section">
+            <h2 class="section-title">Certificados profesionales</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo obtengo mi certificado profesional?</div>
+                <div class="faq-answer">
+                    <p>Una vez acreditadas todas las unidades de competencia que componen un certificado profesional, puede solicitar su expedición a través de:</p>
+                    <p>1. <strong>Sede electrónica</strong>: Procedimiento 3643 (<a href="https://sede.gobiernodecanarias.org/sede/tramites/3643" target="_blank">enlace directo</a>).</p>
+                    <p>2. <strong>Presencialmente</strong>: en las oficinas de registro habilitadas.</p>
+                    <p>Puede consultar la guía <a href="media/SOLICITUD_CERTIFICADO_PROFESIONAL_SEDE.pdf" target="_blank">Ayuda para solicitar el certificado profesional por sede electrónica</a>.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué validez tiene el certificado profesional?</div>
+                <div class="faq-answer">
+                    <p>El certificado profesional tiene validez en todo el territorio nacional y acredita oficialmente las competencias profesionales que contiene.</p>
+                    <p>Beneficios:</p>
+                    <p>- Mejora sus posibilidades de inserción y promoción laboral.</p>
+                    <p>- Facilita la movilidad profesional.</p>
+                    <p>- Permite acceder a oposiciones o concursos que requieran esa titulación.</p>
+                    <p>- Facilita la convalidación de módulos formativos de ciclos de FP.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cuándo recibiré mi certificado?</div>
+                <div class="faq-answer">
+                    <p>El Servicio Canario de Empleo es el organismo responsable de la expedición de los certificados profesionales.</p>
+                    <p>El tiempo de tramitación puede variar, pero suele tomar entre 2 y 3 meses desde la solicitud.</p>
+                    <p>Para consultas sobre el estado de su certificado, puede escribir a <a href="mailto:certificados.sce@gobiernodecanarias.org">certificados.sce@gobiernodecanarias.org</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección: Formación -->
+        <section id="formacion" class="section">
+            <h2 class="section-title">Formación complementaria</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Qué opciones tengo para completar mi formación?</div>
+                <div class="faq-answer">
+                    <p>Si necesita formación complementaria, puede optar por:</p>
+                    <p>- <strong>Cursos del Servicio Canario de Empleo</strong>: formación para el empleo gratuita.</p>
+                    <p>- <strong>Formación Profesional modular</strong>: solo los módulos que necesite.</p>
+                    <p>- <strong>FP a distancia</strong>: compatible con su actividad laboral.</p>
+                    <p>Al finalizar el procedimiento, recibirá un informe de orientación con recomendaciones específicas.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo acceder a un ciclo formativo con las unidades acreditadas?</div>
+                <div class="faq-answer">
+                    <p>Las unidades de competencia acreditadas pueden convalidarse con módulos profesionales de ciclos formativos, facilitando la obtención del título.</p>
+                    <p>Dependiendo de las unidades acreditadas y sus requisitos académicos previos:</p>
+                    <p>- Puede matricularse solo en los módulos que le faltan para completar el título.</p>
+                    <p>- Debe cumplir los requisitos de acceso generales para la FP de Grado Medio o Superior.</p>
+                    <p>Consulte las convalidaciones posibles en el <a href="https://cualificaciones-profesionales.vercel.app/" target="_blank">Buscador de cualificaciones profesionales Canarias 2025</a>.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Hay ayudas o becas para esta formación?</div>
+                <div class="faq-answer">
+                    <p>Existen diversas ayudas para continuar su formación:</p>
+                    <p>- <strong>Becas del Ministerio de Educación</strong> para estudios oficiales de FP.</p>
+                    <p>- <strong>Becas del Gobierno de Canarias</strong> para formación profesional.</p>
+                    <p>- <strong>Permisos individuales de formación</strong> para trabajadores en activo.</p>
+                    <p>- <strong>Ayudas a desempleados</strong> para cursos del SCE.</p>
+                    <p>Infórmese en los centros de formación o en el <a href="https://www.gobiernodecanarias.org/educacion/web/formacion_profesional/" target="_blank">portal de FP del Gobierno de Canarias</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <a href="index.html" class="btn">Volver a la página principal</a>
+        
+        <footer>
+            <p>Esta web tiene carácter informativo, no vinculante</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Función para manejar el clic en las preguntas
+            const questions = document.querySelectorAll('.faq-question');
+            
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // Toggle active class para la pregunta
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class para la respuesta asociada
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('active');
+                });
+            });
+            
+            // Función para el scroll suave a las secciones
+            const categoryLinks = document.querySelectorAll('.index-section a');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
