@@ -122,6 +122,49 @@
             margin-top: 20px;
             margin-bottom: 10px;
         }
+
+        /* Estilos para el acordeón */
+        .accordion-header {
+            background-color: #f8f8f8;
+            border: 1px solid var(--color-bordes);
+            border-radius: 4px;
+            padding: 8px 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .accordion-header:hover {
+            background-color: #f0f0f0;
+        }
+
+        .accordion-header h3 {
+            margin: 0;
+            display: inline;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        .accordion-icon {
+            color: var(--color-verde);
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        .active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .active .accordion-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -143,28 +186,65 @@
         <section class="section">
             <h2 class="section-title">Normativa</h2>
             
-            <h3>Normativa estatal</h3>
-            <ul>
-                <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-5139">Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional</a></li>
-                <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-16889">Real Decreto 659/2023, de 18 de julio, por el que se desarrolla la ordenación del 
-                    Sistema de Formación Profesional.</a> El procedimiento se regula en el título VI (artículos 175 a 188)</li>
-                <li><a href="https://www.boe.es/eli/es/rd/2025/02/04/69">Real Decreto 69/2025, de 4 de febrero, por el que se desarrollan los elementos integrantes y los instrumentos de gestión del Sistema Nacional de Formación Profesional</a></li>
-            </ul>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Normativa estatal procedimiento de acreditación</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-5139">Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional</a></li>
+                        <li><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-16889">Real Decreto 659/2023, de 18 de julio, por el que se desarrolla la ordenación del 
+                            Sistema de Formación Profesional.</a> El procedimiento se regula en el título VI (artículos 175 a 188)</li>
+                        <li><a href="https://www.boe.es/eli/es/rd/2025/02/04/69">Real Decreto 69/2025, de 4 de febrero, por el que se desarrollan los elementos integrantes y los instrumentos de gestión del Sistema Nacional de Formación Profesional</a></li>
+                    </ul>
+                </div>
+            </div>
             
-            <h3>Normativa Canarias</h3>
-            <ul>
-                <li><a href="https://www.gobiernodecanarias.org/boc/2025/041/832.html">Resolución de 17 de febrero de 2025, por la que se establecen las cualificaciones profesionales susceptibles de acreditación en el procedimiento de acreditación de competencias en Canarias en el año 2025</a></li>
-                
-            </ul>
-            <h3>Normativa reciente grados A, B y C</h3>
-            <ul>
-                
-                <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-6797">Real Decreto 207/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Administración y Gestión; Agraria; Informática y Comunicaciones; y Madera, Mueble y Corcho.</a></li>
-                <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7040">Real Decreto 208/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Artes Gráficas; Fabricación Mecánica; Servicios Socioculturales y a la Comunidad; y Vidrio y Cerámica.</a></li>
-                <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-6699">Real Decreto 209/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Imagen Personal; Imagen y Sonido; Instalación y Mantenimiento; y Química.</a></li>
-                <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7096">Real Decreto 211/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Industrias Alimentarias; Seguridad y Medio Ambiente; Textil, Confección y Piel; y Transporte y Mantenimiento de Vehículos.</a></li>
-                <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7193">Real Decreto 212/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Actividades Físicas y Deportivas; Comercio y Marketing; y Marítimo-Pesquera.</a></li>
-            </ul>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Normativa Canarias procedimiento de acreditación</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="https://www.gobiernodecanarias.org/boc/2025/041/832.html">Resolución de 17 de febrero de 2025, por la que se establecen las cualificaciones profesionales susceptibles de acreditación en el procedimiento de acreditación de competencias en Canarias en el año 2025</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Normativa reciente grados A, B y C abril 2025</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-6797">Real Decreto 207/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Administración y Gestión; Agraria; Informática y Comunicaciones; y Madera, Mueble y Corcho.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7040">Real Decreto 208/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Artes Gráficas; Fabricación Mecánica; Servicios Socioculturales y a la Comunidad; y Vidrio y Cerámica.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-6699">Real Decreto 209/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Imagen Personal; Imagen y Sonido; Instalación y Mantenimiento; y Química.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7096">Real Decreto 211/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Industrias Alimentarias; Seguridad y Medio Ambiente; Textil, Confección y Piel; y Transporte y Mantenimiento de Vehículos.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7193">Real Decreto 212/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para las familias profesionales Actividades Físicas y Deportivas; Comercio y Marketing; y Marítimo-Pesquera.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-7295">Real Decreto 213/2025, de 18 de marzo, por el que se regulan aspectos específicos de los grados A, B y C de Formación Profesional para la familia profesional Hostelería y Turismo.</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Modificaciones reales decretos títulos FP mayo 2024</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-10682">Real Decreto 497/2024, de 21 de mayo, por el que se modifican determinados reales decretos por los que se establecen, en el ámbito de la Formación Profesional, cursos de especialización de grado medio y superior y se fijan sus enseñanzas mínimas.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-10683">Real Decreto 498/2024, de 21 de mayo, por el que se modifican determinados reales decretos por los que se establecen títulos de Formación Profesional de grado básico y se fijan sus enseñanzas mínimas.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-10684">Real Decreto 499/2024, de 21 de mayo, por el que se modifican determinados reales decretos por los que se establecen títulos de Formación Profesional de grado medio y se fijan sus enseñanzas mínimas.</a></li>
+                        <li><a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-10685">Real Decreto 500/2024, de 21 de mayo, por el que se modifican determinados reales decretos por los que se establecen títulos de Formación Profesional de grado superior y se fijan sus enseñanzas mínimas.</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
 
         <section class="section">
@@ -184,7 +264,7 @@
                     En este enlace se puede ver en detalle las unidades de competencia/estándares de competencias profesionales de cada cualificación.</li>
                 <li><a href="https://incual.educacion.gob.es/manual-procedimiento">Manuales del procedimiento</a></li>
                 <li><a href="https://incual.educacion.gob.es/instrumentos/nivel1/deportivas">Instrumentos de apoyo (guías y cuestionarios de autoevaluación) por familia profesional</a></li>
-                            </ul>
+            </ul>
 
             <h3>Todo FP - Ministerio de Educación Formación Profesional y Deportes</h3>
             <ul>
@@ -196,13 +276,12 @@
                 <li><a href="https://todofp.es/catalogos-registros-sistema-fp.html">Catálogos y Registros del Sistema de Formación Profesional</a></li>
                 <li><a href="https://todofp.es/que-estudiar.html">Información sobre los grados A, B, C, D, E</a></li>
             </ul>
-                <h3>Otras páginas de ayuda</h3>
+
+            <h3>Otras páginas de ayuda</h3>
             <ul>
-                
                 <li><a href="https://www1.hezkuntza.net/LHSIFP/">Herramienta de información FP Euskadi</a></li>
                 <li><a href="https://fp.gencat.cat/ca/arees/cataleg-de-qualificacions-professionals/visors/">Visores <em>Agència Pública de Formació i Qualificació Professionals de Catalunya</em></a></li>
             </ul>
-
         </section>
 
         <section class="section">
@@ -218,14 +297,12 @@
             <ul>
                 <li><a href="media/CARTEL_1.pdf">Cartel 1</a>, <a href="media/CARTEL_2.pdf">Cartel 2</a>, <a href="media/CARTEL_3.pdf">Cartel 3</a>, <a href="media/CARTEL_4.pdf">Cartel 4</a>, 
                     <a href="media/CARTEL_5.pdf">Cartel 5</a>, <a href="media/CARTEL_6.pdf">Cartel 6</a></li>
-
             </ul>
 
             <h3>Vídeos (youtube)</h3>
             <ul>
                 <li><a href="https://www.youtube.com/watch?v=A2O7Wp7gHAc&list=PLK7E2_aq8YhDbNgbYZ3QfNO-KlRNV9jB7">Lista de reproducción sobre el procedimiento</a></li>
             </ul>
-
         </section>
 
         <section class="section">
@@ -249,13 +326,9 @@
             <h3>Dudas frecuentes (FAQ)</h3>
             <ul>
                 <li>En breve</li>
-                            </ul>
-
-            
-
+            </ul>
         </section>
        
-        
         <section class="section">
             <h2 class="section-title">Contacto</h2>
             <p>Las personas participantes en el procedimiento pueden realizar consultas directamente a través de estas dos
@@ -267,12 +340,21 @@
             <p>Para cuestiones relacionadas con la emisión de certificados profesionales (Servicio
                 Canario de Empleo), puede hacer las consultas a través de la dirección de correo electrónico: <strong>certificados.sce@gobiernodecanarias.org</strong> (Más información sobre la expedición de certificados profesionales:
                 <a href="https://www.gobiernodecanarias.org/empleo/sce/principal/areas_tematicas/formacion_acreditacion/certificados_profesionalidad/">Certificados Profesionales SCE</a>)</p>
-
         </section>
         
         <footer>
             <p>Esta web tiene carácter informativo, no vinculante</p>
         </footer>
     </div>
+
+    <script>
+        function toggleAccordion(element) {
+            // Toggle active class on the clicked header's parent
+            element.parentElement.classList.toggle("active");
+        }
+
+        // Opcional: Al inicio, activar un elemento específico (por ejemplo, el primero)
+        // document.querySelector(".accordion-item").classList.add("active");
+    </script>
 </body>
 </html>
